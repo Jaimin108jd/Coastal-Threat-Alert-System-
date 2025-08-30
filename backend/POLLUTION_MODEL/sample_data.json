@@ -1,0 +1,19 @@
+{
+    "pH": 6.84,
+    "dissolved_oxygen": 6.76,
+    "biochemical_oxygen_demand": 9.48,
+    "chemical_oxygen_demand": 36.10,
+    "nitrates": 6.366,
+    "phosphates": 2.768,
+    "toxicity_level": "Very High",
+    "turbidity": 36.91,
+    "temperature": 27.65,
+    "salinity": 36.47,
+    "bacterial_count": 13777,
+    "algal_bloom_risk": 0.5357,
+    "coral_bleaching_index": 0.3322,
+    "fish_mortality_rate": 0.0898,
+    "industrial_waste_indicator": 0.5429,
+    "agricultural_runoff_index": 0.3957,
+    "domestic_sewage_index": 0.7748
+}

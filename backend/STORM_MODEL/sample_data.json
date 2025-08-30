@@ -1,0 +1,21 @@
+{
+  "water_level": 0.5,
+  "surge_height": 0.2,
+  "wave_height": 8,
+  "wave_period": 4.0,
+  "wave_direction": 80,
+  "tidal_level": 0.3,
+  "tidal_range": 0.2,
+  "current_speed": 0.5,
+  "current_direction": 90,
+  "wind_speed": 8.0,
+  "wind_direction": 150,
+  "wind_gusts": 10.0,
+  "atmospheric_pressure": 1015,
+  "pressure_trend": 0.1,
+  "air_temperature": 28.0,
+  "sea_surface_temp": 29.0,
+  "flood_depth": 0.0,
+  "inundation_area": 0,
+  "drainage_rate": 1.0
+}

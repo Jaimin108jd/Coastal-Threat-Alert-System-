@@ -1,0 +1,17 @@
+ {
+      "shoreline_position": 85.7,
+      "beach_width": 18.2,
+      "beach_volume": 1200.0,
+      "dune_height": 2.8,
+      "dune_width": 12.0,
+      "cliff_retreat_rate": 0.3,
+      "wave_height": 2.8,
+      "wave_period": 7.5,
+      "wave_energy": 15500.0,
+      "tidal_range": 2.2,
+      "storm_surge_frequency": 0.4,
+      "wind_speed": 18.0,
+      "wind_direction": 180.0,
+      "sea_level_rise": 0.004,
+      "relative_sea_level_change": 0.003
+    }

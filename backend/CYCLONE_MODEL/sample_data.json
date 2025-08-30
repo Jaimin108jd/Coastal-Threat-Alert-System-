@@ -1,0 +1,11 @@
+{
+  "central_pressure": 980.0,
+  "wind_speed": 120.0,
+  "wind_shear": 15.0,
+  "sea_surface_temp": 30.0,
+  "cloud_top_temp": -70.0,
+  "vorticity": 0.002,
+  "convective_activity": 0.8,
+  "humidity": 80.0,
+  "precipitation": 50.0
+}
