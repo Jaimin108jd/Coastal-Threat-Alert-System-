@@ -1,0 +1,8 @@
+Metric,Value,Type
+Training R²,0.791084,R² Score
+Testing R²,0.466992,R² Score
+CV R² Mean,0.477762,R² Score
+Training MAE,0.052468,MAE
+Testing MAE,0.084191,MAE
+Training MSE,0.004383,MSE
+Testing MSE,0.011452,MSE
