@@ -1,7 +1,7 @@
 # 🌊 Coastal Threat Alert System
 
 **Team Name:** 404 NOT FOUND  
-**Tech Stack:** Next.js · FastAPI · Python · Scikit-learn ·  · MySQL
+**Tech Stack:** Next.js · FastAPI · Python · Scikit-learn · Leaflet · MySQL
 
 ## 🚀 Overview
 
@@ -49,7 +49,7 @@ Each model uses historical and sensor data:
 
 ---
 
-## 🗺️ Mapbox Integration
+## 🗺️ Leaflet Integration
 
 - Receives JSON API data every 10s
 - Icons/Markers change color dynamically
