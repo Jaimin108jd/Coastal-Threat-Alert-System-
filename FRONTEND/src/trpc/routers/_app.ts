@@ -6,7 +6,12 @@ import { stormSurgeRouter } from './storm-surge';
 import { pollutionRouter } from './pollution';
 import { coastalErosionRouter } from './coastal-erosion';
 import { subscriptionRouter } from './subscription';
+import { predictionsRouter } from './predictions';
+import { alertsRouter } from './alerts';
 import { cycloneRouterSubscription } from '../subscriptions/cyclone';
+import { pollutionRouterSubscription } from '../subscriptions/poll';
+import { stormSurgeRouterSubscription } from '../subscriptions/strom';
+import { coastalErosionRouterSubscription } from '../subscriptions/coastal-er';
 
 export const appRouter = createTRPCRouter({
     user: userRouter,
@@ -15,7 +20,12 @@ export const appRouter = createTRPCRouter({
     pollution: pollutionRouter,
     coastalErosion: coastalErosionRouter,
     subscription: subscriptionRouter,
+    predictions: predictionsRouter,
+    alerts: alertsRouter,
     cysub: cycloneRouterSubscription,
+    pollsub: pollutionRouterSubscription,
+    surgesub: stormSurgeRouterSubscription,
+    coastalsub: coastalErosionRouterSubscription,
 });
 
 // export type definition of API

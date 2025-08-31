@@ -7,7 +7,7 @@ function getRandomLocation() {
     return regions[idx];
 }
 
-function generateCycloneData(baseLocation: { lat: number; lng: number }) {
+function generateCycloneData(region: { region: string; state: string; lat: number; long: number }) {
     return {
         centralPressure: 980 + (Math.random() - 0.5) * 10,
         speed: 100 + Math.random() * 60,
@@ -18,8 +18,10 @@ function generateCycloneData(baseLocation: { lat: number; lng: number }) {
         convectiveActivity: 0.5 + Math.random() * 0.5,
         humidity: 70 + Math.random() * 15,
         precipitation: 40 + Math.random() * 20,
-        lat: baseLocation.lat,
-        lng: baseLocation.lng,
+        lat: region.lat,
+        lng: region.long,
+        region: region.region,
+        state: region.state,
     };
 }
 
@@ -33,7 +35,7 @@ export const cycloneRouterSubscription = createTRPCRouter({
                     console.log("📡 Request triggered");
 
                     const input = getRandomLocation();
-                    const fakeData = generateCycloneData({ lat: input.lat, lng: input.long });
+                    const fakeData = generateCycloneData(input);
 
                     let finalData: any = null;
 

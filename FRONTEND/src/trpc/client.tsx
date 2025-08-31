@@ -2,7 +2,7 @@
 // ^-- to make sure we can mount the Provider from a server component
 import type { QueryClient } from '@tanstack/react-query';
 import { QueryClientProvider } from '@tanstack/react-query';
-import { createTRPCClient, httpBatchLink, httpSubscriptionLink } from '@trpc/client';
+import { createTRPCClient, httpBatchLink, httpSubscriptionLink, splitLink } from '@trpc/client';
 import { createTRPCContext } from '@trpc/tanstack-react-query';
 import { useState } from 'react';
 import { makeQueryClient } from './query-client';
@@ -43,9 +43,20 @@ export function TRPCReactProvider(
     const [trpcClient] = useState(() =>
         createTRPCClient<AppRouter>({
             links: [
-                httpSubscriptionLink({
-                    transformer: superjson, 
-                    url: getUrl(),
+                splitLink({
+                    condition(op) {
+                        return op.type === 'subscription';
+                    },
+                    // Subscriptions
+                    true: httpSubscriptionLink({
+                        url: getUrl(),
+                        transformer: superjson,
+                    }),
+                    // Queries + Mutations
+                    false: httpBatchLink({
+                        url: getUrl(),
+                        transformer: superjson,
+                    }),
                 }),
             ],
         }),

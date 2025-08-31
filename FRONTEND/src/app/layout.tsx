@@ -20,6 +20,9 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Nextjs Auth Template Created By BuddyCodez",
   description: "A template for Next.js applications with authentication",
+  other: {
+    'ethereum-provider': 'none', // Prevent MetaMask auto-detection
+  },
 };
 
 export default function RootLayout({
@@ -31,6 +34,29 @@ export default function RootLayout({
     <TRPCReactProvider>
       <AuthProvider>
         <html lang="en">
+          <head>
+            <script
+              dangerouslySetInnerHTML={{
+                __html: `
+                  // Suppress MetaMask connection errors
+                  window.addEventListener('error', function(e) {
+                    if (e.message && e.message.includes('MetaMask')) {
+                      e.preventDefault();
+                      e.stopPropagation();
+                      return false;
+                    }
+                  });
+                  
+                  window.addEventListener('unhandledrejection', function(e) {
+                    if (e.reason && e.reason.message && e.reason.message.includes('MetaMask')) {
+                      e.preventDefault();
+                      return false;
+                    }
+                  });
+                `,
+              }}
+            />
+          </head>
           <body
             className={`${geistSans.variable} ${geistMono.variable} antialiased`}
           >

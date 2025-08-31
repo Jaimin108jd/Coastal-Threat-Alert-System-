@@ -94,30 +94,6 @@ export default function RegisterPage() {
                             />
                         </motion.div>
 
-                        {/* Terms and Conditions */}
-                        <motion.div
-                            className="flex items-start space-x-3 p-4 bg-[#3b82f6]/10 rounded-lg border border-[#3b82f6]/20"
-                            initial={{ opacity: 0, y: 20 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.6, delay: 0.8 }}
-                        >
-                            <input
-                                type="checkbox"
-                                id="terms"
-                                className="mt-1 h-4 w-4 text-[#3b82f6] border-[#3b82f6]/30 rounded focus:ring-[#3b82f6] focus:ring-2 bg-transparent"
-                            />
-                            <label htmlFor="terms" className="text-sm text-white/80 leading-relaxed">
-                                I agree to the{' '}
-                                <Link href="/terms" className="text-[#3b82f6] hover:text-[#3b82f6]/80 font-medium transition-colors">
-                                    Terms of Service
-                                </Link>{' '}
-                                and{' '}
-                                <Link href="/privacy" className="text-[#3b82f6] hover:text-[#3b82f6]/80 font-medium transition-colors">
-                                    Privacy Policy
-                                </Link>
-                            </label>
-                        </motion.div>
-
                         {/* Sign Up Button */}
                         <motion.div
                             initial={{ opacity: 0, y: 20 }}

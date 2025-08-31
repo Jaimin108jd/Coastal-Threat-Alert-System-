@@ -355,3 +355,7 @@ export const regions =
             "long": 73.38
         }
     ]
+
+export const getRegionByCoordinates = (lat: number, long: number) => {
+    return regions.find(region => region.lat === lat && region.long === long);
+};
